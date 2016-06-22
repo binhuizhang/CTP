@@ -93,10 +93,10 @@ public class MenuManager {
         btn24.setType("click");  
         btn24.setKey("24");  
   
-        CommonButton btn25 = new CommonButton();  
-        btn25.setName("产品5");  
-        btn25.setType("click");  
-        btn25.setKey("25");  
+        ViewButton btn25 = new ViewButton();  
+        btn25.setName("查看UserAgent");  
+        btn25.setType("view");  
+        btn25.setUrl("http://datasolution.duapp.com/desuo/index.jsp");
   
         CommonButton btn31 = new CommonButton();  
         btn31.setName("重置密码");  
@@ -138,7 +138,7 @@ public class MenuManager {
   
         ComplexButton mainBtn2 = new ComplexButton();  
         mainBtn2.setName("理财产品");  
-        mainBtn2.setSub_button(new CommonButton[] { btn21, btn22, btn23, btn24, btn25 });  
+        mainBtn2.setSub_button(new Button[] { btn21, btn22, btn23, btn24, btn25 });  
   
         ComplexButton mainBtn3 = new ComplexButton();  
         mainBtn3.setName("网上营业厅");  

@@ -35,5 +35,30 @@
         <servlet-name>oauthServlet</servlet-name>  
         <url-pattern>/oauthServlet</url-pattern>  
     </servlet-mapping>
+    
+    <filter>
+    	<filter-name>browserFilter</filter-name>
+    	<filter-class>
+    		com.desuotest.servlet.BrowserFilter
+    	</filter-class>
+    </filter>
+    <!-- 限制只有微信浏览器才能访问HTML、PNG和JPG -->
+    <filter-mapping>
+    	<filter-name>browserFilter</filter-name>
+    	<url-pattern>*.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+    	<filter-name>browserFilter</filter-name>
+    	<url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+    	<filter-name>browserFilter</filter-name>
+    	<url-pattern>*.png</url-pattern>
+    </filter-mapping>
   
+  	<filter-mapping>
+    	<filter-name>browserFilter</filter-name>
+    	<url-pattern>*.jpg</url-pattern>
+    </filter-mapping>
 </web-app>
